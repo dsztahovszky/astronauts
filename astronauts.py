@@ -6,7 +6,10 @@ def main():
         datas_csvreader = csv.reader(astr_file)
         datas = [data for data in datas_csvreader]
     birthdate_index = datas[0].index('Birth Date')
-    print(datas, birthdate_index, sep='\n')
+    birthdate_months = []
+    for astronaut in datas[1:]:
+        birthdate_months.append(astronaut[birthdate_index].split('/')[0])
+    print(birthdate_months)
 
 
 main()
