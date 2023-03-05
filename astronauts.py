@@ -45,8 +45,10 @@ def main():
                     11: 'December'}
     for month in most_months:
         month[0] = months_words[month[0]]
-    print('A három leggyakoribb születési hónap a NASA űrhajósai körében százalékos aránnyal kiegészítve:',)
-    print(most_months)
+    print('A három leggyakoribb születési hónap a NASA űrhajósai körében százalékos arányokkal kiegészítve:',)
+    print(most_months[0][0], '; ', most_months[0][1], '%')
+    print(most_months[1][0], '; ', most_months[1][1], '%')
+    print(most_months[2][0], '; ', most_months[2][1], '%')
 
 
 main()
