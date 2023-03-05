@@ -46,34 +46,18 @@ def make_most_monts_datas(months):
     return most_months
 
 
-def make_months_words():
-    return {0: 'Január',
-            1: 'Február',
-            2: 'Március',
-            3: 'Április',
-            4: 'Május',
-            5: 'Június',
-            6: 'Július',
-            7: 'Augusztus',
-            8: 'Szeptember',
-            9: 'Október',
-            10: 'November',
-            11: 'December'}
-
-
 def pair_months_words(most_months):
-    months_words = make_months_words()
     for month in most_months:
-        month[0] = months_words[month[0]]
+        month[0] += 1
     return most_months
 
 
 def print_datas(datas):
     print('A három leggyakoribb születési hónap a NASA űrhajósai körében százalékos arányokkal kiegészítve:',
           end='\n\n')
-    print(datas[0][0], '; ', datas[0][1], '%')
-    print(datas[1][0], '; ', datas[1][1], '%')
-    print(datas[2][0], '; ', datas[2][1], '%')
+    print(datas[0][0], '.; ', datas[0][1], '%', sep='')
+    print(datas[1][0], '.; ', datas[1][1], '%', sep='')
+    print(datas[2][0], '.; ', datas[2][1], '%', sep='')
 
 
 def main():
